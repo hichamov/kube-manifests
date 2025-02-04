@@ -5,6 +5,10 @@ metadata:
   namespace: argocd
 spec:
   project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
   source:
     repoURL: https://github.com/hichamov/kube-manifests.git
     targetRevision: HEAD
